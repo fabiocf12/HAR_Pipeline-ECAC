@@ -1,0 +1,21 @@
+Este projeto implementa uma Human Activity Recognition (HAR) pipeline completa, utilizando dados de sensores inerciais (aceleração, giroscópio e magnetómetro). O sistema extrai features de janelas temporais, aplica métodos de seleção/redução de dimensionalidade (PCA, ReliefF) e classifica atividades através de um modelo KNN otimizado.
+
+🚀 Objetivo
+
+Criar um pipeline eficiente, modular e reutilizável para classificar atividades humanas com base em 256 amostras de dados multissensoriais.
+
+O pipeline suporta:
+
+Extração de features manuais (estatísticas + espectrais)
+
+Embeddings (512D)
+
+PCA (explicando 90% da variância)
+
+Seleção de features via ReliefF
+
+Normalização consistente (sem data leakage)
+
+KNN otimizado para melhor valor de k
+
+Método de deployment que recebe qualquer segmento 256×9 e devolve a atividade correspondente.
